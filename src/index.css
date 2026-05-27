@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  
+  --color-bronze: #E1C19F;
+  --color-bronze-glow: #704E26;
+  --color-obsidian: #000000;
+  --color-card-surface: #1F150C;
+  --color-text-primary: #E2E2E2;
+  --color-text-muted: #B19474;
+  --color-border-bronze: rgba(225, 193, 159, 0.12);
+  --color-glass-bg: rgba(31, 21, 12, 0.65);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #000000;
+    color: #E2E2E2;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* Custom scrollbar for premium aesthetic */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #000000;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #1F150C;
+    border: 1px solid rgba(225, 193, 159, 0.1);
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #704E26;
+  }
+
+  ::selection {
+    background-color: #E1C19F;
+    color: #000000;
+  }
+}
+
+/* Custom cinematic glow classes */
+.bronze-glow-hover {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bronze-glow-hover:hover {
+  box-shadow: 0 0 25px rgba(112, 78, 38, 0.25);
+  border-borderColor: rgba(225, 193, 159, 0.3);
+}
+
+.vignette-overlay {
+  background: radial-gradient(circle, transparent 20%, rgba(0, 0, 0, 0.8) 100%);
+  pointer-events: none;
+}
+
+.cinematic-shadow {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+}
