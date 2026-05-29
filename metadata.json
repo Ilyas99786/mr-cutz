@@ -1,0 +1,6 @@
+{
+  "name": "MR. CUTZ",
+  "description": "Premium luxury cinematic digital men's grooming lounge experience.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
